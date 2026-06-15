@@ -110,23 +110,24 @@
   }
   // footer of every page (below the copyright bar)
   var footer = document.querySelector("footer.foot .wrap") || document.querySelector("footer.foot");
-  if (footer) {
-    footer.appendChild(makeSocial());
-    var note = document.createElement("p");
-    note.className = "foot__privacy";
-    note.textContent = "This site uses GoatCounter for anonymous, privacy-friendly analytics — no cookies, no personal data, no cross-site tracking.";
-    footer.appendChild(note);
-  }
+  if (footer) footer.appendChild(makeSocial());
   // bottom of the global menu overlay
   overlay.appendChild(makeSocial());
 
-  // privacy-friendly analytics (GoatCounter) — injected on every page before </body>
-  var GOATCOUNTER_CODE = ""; // set to your code, e.g. "theaicults" -> https://theaicults.goatcounter.com
+  // privacy-friendly analytics (GoatCounter) — injected on every page before </body>.
+  // Set GOATCOUNTER_CODE to turn it on; the privacy note only shows when it's active.
+  var GOATCOUNTER_CODE = ""; // e.g. "theaicults" -> https://theaicults.goatcounter.com
   if (GOATCOUNTER_CODE) {
     var gc = document.createElement("script");
     gc.async = true;
     gc.src = "//gc.zgo.at/count.js";
     gc.setAttribute("data-goatcounter", "https://" + GOATCOUNTER_CODE + ".goatcounter.com/count");
     document.body.appendChild(gc);
+    if (footer) {
+      var note = document.createElement("p");
+      note.className = "foot__privacy";
+      note.textContent = "This site uses GoatCounter for anonymous, privacy-friendly analytics — no cookies, no personal data, no cross-site tracking.";
+      footer.appendChild(note);
+    }
   }
 })();
