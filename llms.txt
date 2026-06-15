@@ -1,0 +1,33 @@
+# The AI Cults
+
+> An independent, source-cited investigation into TESCREAL — the bundle of seven interlocking ideologies (Transhumanism, Extropianism, Singularitarianism, Cosmism, Rationalism, Effective Altruism, Longtermism) that treats building artificial general intelligence as a quasi-religious project. The site documents the movement's history, key figures, money, and consequences. Its stance: pro-AI as a technology, skeptical of the people and ideologies that would use it to control or replace humanity. Terms like "cult" and "religion" are used analytically, not as legal claims; factual claims about named individuals are attributed to cited public sources.
+
+## Core
+
+- [Home — the thesis](https://theaicults.com/): Why Silicon Valley's AI race functions like a religion; evidence, FAQ, and the author's warning.
+- [References library](https://theaicults.com/references.html): 65 primary sources (papers, manifestos, reporting) grouped by theme, all linked.
+- [Legal & disclaimers](https://theaicults.com/legal.html): Opinion/commentary status, attribution, fair use, AI-assisted production disclosure.
+
+## The seven ideologies (TESCREAL)
+
+- [Transhumanism](https://theaicults.com/ideologies/transhumanism.html): Transcending biology through technology; its critics' link to eugenics (Julian Huxley) and the posthuman/"successionism" endgame.
+- [Extropianism](https://theaicults.com/ideologies/extropianism.html): The first organized transhumanist movement — immortality, cryonics, war on entropy (Max More).
+- [Singularitarianism](https://theaicults.com/ideologies/singularitarianism.html): The coming intelligence explosion; Vernor Vinge, Ray Kurzweil, Eliezer Yudkowsky, MIRI, DeepMind, OpenAI.
+- [Cosmism](https://theaicults.com/ideologies/cosmism.html): Colonizing the cosmos and reshaping the universe; Russian Cosmism, Ben Goertzel, Way of the Future.
+- [Rationalism](https://theaicults.com/ideologies/rationalism.html): The LessWrong community, AI alignment, Roko's Basilisk, the Zizians (Eliezer Yudkowsky).
+- [Effective Altruism](https://theaicults.com/ideologies/effective-altruism.html): "Earn to give," its drift to AI risk, and the Sam Bankman-Fried / FTX collapse.
+- [Longtermism](https://theaicults.com/ideologies/longtermism.html): Why vast numbers of future people are said to outweigh the present; William MacAskill, Nick Bostrom, Toby Ord.
+
+## Investigations (dossiers)
+
+- [The Genealogy](https://theaicults.com/genealogy.html): 70 years from cybernetics (Norbert Wiener) and Teilhard de Chardin's Omega Point to the AI arms race.
+- [The Religion](https://theaicults.com/the-religion.html): How the movement maps onto a faith — God=AGI, scripture, heaven, hell, heretics.
+- [The Money](https://theaicults.com/the-money.html): The funding web — Peter Thiel, Open Philanthropy, SBF/FTX, and how capital shaped AI safety.
+- [The Israel Nexus](https://theaicults.com/israel-nexus.html): AI capital and defense tech — Palantir's Lavender/Gospel, Project Nimbus, Unit 8200 (attributed reporting).
+
+## Key people
+
+- Coined "TESCREAL": Timnit Gebru (DAIR) and Émile P. Torres (2023).
+- Prophets: Ray Kurzweil, Eliezer Yudkowsky, Nick Bostrom, Vernor Vinge.
+- Builders: Sam Altman, Ilya Sutskever, Demis Hassabis, Elon Musk.
+- Evangelists: Marc Andreessen, Anthony Levandowski (the literal "Church of AI").

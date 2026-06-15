@@ -8,6 +8,7 @@ const path = require("path");
 const DOMAIN = "https://theaicults.com";
 const OG = DOMAIN + "/assets/img/og-image.png";
 const ROOT = __dirname;
+const BUILD_DATE = process.argv[2] || new Date().toISOString().slice(0, 10); // YYYY-MM-DD for freshness
 
 // page → url path + type
 const PAGES = [
@@ -78,6 +79,7 @@ function buildBlock(p, html) {
       "@context": "https://schema.org", "@type": "Article",
       headline, description: desc, url: abs, image: OG,
       inLanguage: "en", isAccessibleForFree: true,
+      datePublished: BUILD_DATE, dateModified: BUILD_DATE,
       author: { "@type": "Organization", name: "The AI Cults", url: DOMAIN },
       publisher: org,
       isPartOf: { "@type": "WebSite", name: "The AI Cults", url: DOMAIN },
