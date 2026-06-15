@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>References — The AI Cults</title>
+<meta name="description" content="The complete source library behind The AI Cults: primary documents, manifestos, academic papers, reporting, and the counter-arguments — every external link, verified.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/sigil.svg" type="image/svg+xml">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a class="nav__brand" href="index.html">
+    <svg class="sigil" viewBox="0 0 100 100" aria-hidden="true">
+      <polygon points="50,8 92,86 8,86" fill="none" stroke="#c8a34e" stroke-width="3"/>
+      <circle cx="50" cy="60" r="13" fill="none" stroke="#c8a34e" stroke-width="3"/>
+      <circle cx="50" cy="60" r="4" fill="#c8a34e"/>
+      <line x1="50" y1="8" x2="50" y2="47" stroke="#c8a34e" stroke-width="3"/>
+    </svg>
+    <span>The&nbsp;<b>AI&nbsp;Cults</b></span>
+  </a>
+  <button class="nav__toggle" id="navToggle" aria-expanded="false">Menu</button>
+  <ul class="nav__links" id="navLinks">
+    <li><a href="index.html#tescreal">TESCREAL</a></li>
+    <li><a href="ideologies/transhumanism.html">Ideologies</a></li>
+    <li><a href="index.html#figures">Figures</a></li>
+    <li><a href="references.html">References</a></li>
+  </ul>
+</nav>
+
+<!-- HEADER -->
+<header class="ideo-hero" style="padding-top:120px;">
+  <svg class="ideo-hero__geo" viewBox="0 0 400 400" aria-hidden="true">
+    <circle cx="200" cy="200" r="180" stroke-width="1"/>
+    <circle cx="200" cy="200" r="120" stroke-width="1"/>
+    <polygon points="200,40 340,300 60,300" stroke-width="1"/>
+  </svg>
+  <div class="wrap ideo-hero__inner">
+    <span class="eyebrow">The library</span>
+    <h1>References</h1>
+    <p class="summary">Every claim on this site traces to a public source. Below is the full library — primary documents, manifestos, academic papers, reporting, and the strongest counter-arguments — grouped by theme. Inclusion is not endorsement; the record is here so you can judge it yourself. <strong id="refCount"></strong></p>
+  </div>
+</header>
+
+<!-- REFERENCES -->
+<section class="section-pad">
+  <div class="wrap">
+    <div id="refRoot"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__bar">
+      <span>The AI Cults · {year}</span>
+      <span>All URLs verified at time of compilation</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/data/references.js"></script>
+<script>
+(function () {
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+  var data = window.REFERENCES || [], total = 0;
+  var html = data.map(function (cat) {
+    total += cat.items.length;
+    var items = cat.items.map(function (r) {
+      var link = r.url
+        ? '<a class="ref__link" href="' + r.url + '" target="_blank" rel="noopener noreferrer">' + esc(r.title) + ' <span>↗</span></a>'
+        : esc(r.title);
+      return '<li class="ref"><div class="ref__body">' + link +
+        '<span class="ref__src">' + esc(r.source) + '</span></div></li>';
+    }).join("");
+    return '<div class="ref-cat reveal"><div class="ref-cat__h"><h3>' + esc(cat.group) +
+      '</h3><span>' + cat.items.length + ' sources</span></div><ol class="reflist">' + items + '</ol></div>';
+  }).join("");
+  document.getElementById("refRoot").innerHTML = html;
+  document.getElementById("refCount").textContent = total + " sources across " + data.length + " themes.";
+
+  // footer year + menu + external links
+  var b = document.querySelector(".foot__bar span"); if (b) b.textContent = b.textContent.replace("{year}", new Date().getFullYear());
+  var tg = document.getElementById("navToggle"), lk = document.getElementById("navLinks");
+  if (tg) tg.addEventListener("click", function(){ var o=lk.classList.toggle("open"); tg.textContent=o?"Close":"Menu"; });
+  var nav = document.getElementById("nav");
+  window.addEventListener("scroll", function(){ nav.classList.toggle("scrolled", window.scrollY>24); }, {passive:true});
+  // reveal
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{threshold:0.08});
+    document.querySelectorAll(".reveal").forEach(function(el){io.observe(el);});
+  } else document.querySelectorAll(".reveal").forEach(function(el){el.classList.add("in");});
+  // external links new tab
+  var host = window.location.hostname;
+  document.querySelectorAll('a[href^="http"]').forEach(function(a){ if(!host||a.hostname!==host){a.target="_blank"; a.rel="noopener noreferrer";}});
+})();
+</script>
+<script src="assets/js/menu.js"></script>
+</body>
+</html>

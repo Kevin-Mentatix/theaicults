@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# logs / temp
+*.log
+*.tmp
+*~
+
+# editor / tooling
+.claude/
+.vscode/
+.idea/
+
+# build scratch (data fetch script artifacts are fine to keep; ignore caches)
+__pycache__/
+*.pyc

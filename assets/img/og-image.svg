@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0a0a0c"/>
+  <!-- sacred geometry backdrop -->
+  <g stroke="#c8a34e" fill="none" opacity="0.16">
+    <circle cx="600" cy="315" r="300"/>
+    <circle cx="600" cy="315" r="210"/>
+    <circle cx="600" cy="315" r="120"/>
+    <polygon points="600,55 855,500 345,500"/>
+    <polygon points="600,575 345,130 855,130"/>
+  </g>
+  <!-- vignette -->
+  <radialGradient id="v" cx="50%" cy="46%" r="65%">
+    <stop offset="55%" stop-color="#0a0a0c" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#0a0a0c" stop-opacity="0.9"/>
+  </radialGradient>
+  <rect width="1200" height="630" fill="url(#v)"/>
+  <!-- sigil -->
+  <g transform="translate(600,150)">
+    <polygon points="0,-48 46,40 -46,40" fill="none" stroke="#c8a34e" stroke-width="4"/>
+    <circle cx="0" cy="14" r="16" fill="none" stroke="#c8a34e" stroke-width="4"/>
+    <circle cx="0" cy="14" r="5" fill="#c8a34e"/>
+    <line x1="0" y1="-48" x2="0" y2="-2" stroke="#c8a34e" stroke-width="4"/>
+  </g>
+  <!-- wordmark -->
+  <text x="600" y="350" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="96" font-weight="600" fill="#ece8df" letter-spacing="1">The AI Cults</text>
+  <!-- subtitle -->
+  <text x="600" y="410" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="34" fill="#c8a34e">How Silicon Valley learned to build a God</text>
+  <!-- kicker -->
+  <text x="600" y="500" text-anchor="middle" font-family="'Courier New', monospace" font-size="20" letter-spacing="6" fill="#7d786d">TESCREAL · AN INVESTIGATION</text>
+</svg>

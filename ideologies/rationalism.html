@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rationalism — The AI Cults</title>
+<meta name="description" content="Rationalism: the LessWrong community and the movement that treats building the right AI as humanity's defining task. Figures, timeline, and critique.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="../assets/img/sigil.svg" type="image/svg+xml">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a class="nav__brand" href="../index.html">
+    <svg class="sigil" viewBox="0 0 100 100" aria-hidden="true">
+      <polygon points="50,8 92,86 8,86" fill="none" stroke="#c8a34e" stroke-width="3"/>
+      <circle cx="50" cy="60" r="13" fill="none" stroke="#c8a34e" stroke-width="3"/>
+      <circle cx="50" cy="60" r="4" fill="#c8a34e"/>
+      <line x1="50" y1="8" x2="50" y2="47" stroke="#c8a34e" stroke-width="3"/>
+    </svg>
+    <span>The&nbsp;<b>AI&nbsp;Cults</b></span>
+  </a>
+  <button class="nav__toggle" id="navToggle" aria-expanded="false">Menu</button>
+  <ul class="nav__links" id="navLinks">
+    <li><a href="../index.html#tescreal">TESCREAL</a></li>
+    <li><a href="transhumanism.html">Ideologies</a></li>
+    <li><a href="../index.html#figures">Figures</a></li>
+    <li><a href="../references.html">References</a></li>
+  </ul>
+</nav>
+
+<!-- IDEOLOGY NAVIGATOR -->
+<div class="ideo-navbar">
+  <span class="ideo-navbar__label">Choose a letter · <b>navigate the seven ideologies</b></span>
+  <div class="ideo-strip" id="letterStrip"></div>
+</div>
+
+<!-- HERO -->
+<header class="ideo-hero">
+  <svg class="ideo-hero__geo" viewBox="0 0 400 400" aria-hidden="true">
+    <circle cx="200" cy="200" r="180" stroke-width="1"/>
+    <circle cx="200" cy="200" r="120" stroke-width="1"/>
+    <polygon points="200,40 340,300 60,300" stroke-width="1"/>
+    <circle cx="200" cy="200" r="34" stroke-width="1.4"/>
+  </svg>
+  <div class="wrap ideo-hero__inner">
+    <span class="letter-mark" id="heroLetter">R</span>
+    <span class="eyebrow">Part of the TESCREAL bundle</span>
+    <h1 id="heroName">Rationalism</h1>
+    <p class="tagline" id="heroTagline"></p>
+    <p class="defn" id="heroDefn"></p>
+    <p class="summary" id="heroSummary"></p>
+  </div>
+</header>
+
+<!-- OVERVIEW -->
+<section class="section-pad">
+  <div class="wrap">
+    <div class="section-head reveal"><span class="eyebrow">Overview</span><h2>What it is</h2></div>
+    <div class="prose" id="overview"></div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- TENETS -->
+<section class="section-pad">
+  <div class="wrap">
+    <div class="section-head reveal"><span class="eyebrow">Core tenets</span><h2>What its believers hold</h2>
+      <p>The doctrines that recur across the movement's founders, theorists, and builders.</p></div>
+    <div class="tenets" id="tenets"></div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- CONCEPTS -->
+<section class="section-pad">
+  <div class="wrap">
+    <div class="section-head reveal"><span class="eyebrow">Key concepts</span><h2>The vocabulary</h2>
+      <p>The specialized terms you need to read the movement in its own words.</p></div>
+    <div class="gloss" id="concepts"></div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- TIMELINE -->
+<section class="section-pad">
+  <div class="wrap">
+    <div class="section-head reveal"><span class="eyebrow">Timeline</span><h2>How it unfolded</h2></div>
+    <div class="timeline" id="timeline"></div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- FIGURES -->
+<section class="section-pad">
+  <div class="wrap">
+    <div class="section-head reveal"><span class="eyebrow">Key figures</span><h2>The cast</h2>
+      <p>Founders, theorists, builders, and financiers of the project.</p></div>
+    <div class="figgrid" id="figgrid"></div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- KEY TEXTS -->
+<section class="section-pad">
+  <div class="wrap">
+    <div class="section-head reveal"><span class="eyebrow">Key texts</span><h2>The canon</h2>
+      <p>The essays, declarations, and books that built the doctrine.</p></div>
+    <div class="textlist" id="texts"></div>
+  </div>
+</section>
+
+<!-- PULL QUOTES -->
+<section class="section-pad" style="background:var(--ink-2); border-block:1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head reveal"><span class="eyebrow">In their own words</span><h2>On the record</h2></div>
+    <div class="quotes" id="quotes"></div>
+  </div>
+</section>
+
+<!-- CRITIQUE -->
+<section class="section-pad critique">
+  <div class="wrap">
+    <div class="section-head reveal"><span class="eyebrow">The critique</span><h2>The case against</h2>
+      <div id="critiqueBody"></div></div>
+    <div class="crit-points" id="critiquePoints"></div>
+  </div>
+</section>
+
+<!-- CONNECTIONS -->
+<section class="section-pad">
+  <div class="wrap">
+    <div class="section-head reveal"><span class="eyebrow">Inside the bundle</span><h2>How it connects</h2>
+      <p>Transhumanism does not stand alone. It feeds — and is fed by — the other letters of TESCREAL.</p></div>
+    <div class="conns" id="connections"></div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- MINDMAP -->
+<section class="section-pad">
+  <div class="wrap">
+    <div class="section-head reveal"><span class="eyebrow">The network</span><h2>The full web</h2>
+      <p>People, organizations, and the ideologies this one bleeds into. Drag nodes, hover to isolate, scroll to zoom — or pop it out fullscreen.</p></div>
+    <div class="mindmap-wrap reveal">
+      <div class="mm-actions">
+        <a class="mm-btn" id="mm3d" style="display:none" target="_blank" rel="noopener">3D View</a>
+        <button class="mm-btn" id="mmPopout">⤢ Pop out</button>
+      </div>
+      <svg id="mmInline" aria-label="Connection graph"></svg>
+      <span class="mm-hint">drag · hover · scroll to zoom</span>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- SOURCES -->
+<section class="section-pad">
+  <div class="wrap">
+    <div class="section-head reveal"><span class="eyebrow">Sources</span><h2>Citations &amp; further reading</h2>
+      <p>Primary documents and reporting used on this page. See the full <a href="../references.html">References library →</a> for the complete source list.</p></div>
+    <ol class="reflist" id="sources"></ol>
+  </div>
+</section>
+
+<!-- PREV / NEXT -->
+<nav class="ideo-nav">
+  <a id="prevLink" href="#"><span class="dir">← Previous</span><div class="nm" id="prevName"></div></a>
+  <a class="next" id="nextLink" href="#"><span class="dir">Next →</span><div class="nm" id="nextName"></div></a>
+</nav>
+
+<!-- MINDMAP MODAL -->
+<div class="mm-modal" id="mmModal">
+  <span class="mm-modal__title" id="mmModalTitle">Rationalism — connection network</span>
+  <button class="mm-modal__close" id="mmClose">✕ Close (Esc)</button>
+  <svg id="mmModalSvg"></svg>
+</div>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__bar">
+      <span>The AI Cults · {year}</span>
+      <span><a href="../assets/img/figures/CREDITS.md">Photo credits &amp; licenses</a></span>
+    </div>
+  </div>
+</footer>
+
+<script id="d3script" src="https://d3js.org/d3.v7.min.js"></script>
+<script src="../assets/data/rationalism.js"></script>
+<script src="../assets/js/ideology.js"></script>
+<script>
+  // footer year + mobile menu (shared bits)
+  var b = document.querySelector(".foot__bar span"); if (b) b.textContent = b.textContent.replace("{year}", new Date().getFullYear());
+  var tg = document.getElementById("navToggle"), lk = document.getElementById("navLinks");
+  if (tg) tg.addEventListener("click", function(){ var o=lk.classList.toggle("open"); tg.textContent=o?"Close":"Menu"; });
+</script>
+<script src="../assets/js/menu.js"></script>
+</body>
+</html>
