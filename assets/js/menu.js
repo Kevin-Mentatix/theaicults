@@ -116,7 +116,7 @@
 
   // privacy-friendly analytics (GoatCounter) — injected on every page before </body>.
   // Set GOATCOUNTER_CODE to turn it on; the privacy note only shows when it's active.
-  var GOATCOUNTER_CODE = ""; // e.g. "theaicults" -> https://theaicults.goatcounter.com
+  var GOATCOUNTER_CODE = "theaicults"; // -> https://theaicults.goatcounter.com
   if (GOATCOUNTER_CODE) {
     var gc = document.createElement("script");
     gc.async = true;
